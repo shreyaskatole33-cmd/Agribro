@@ -49,6 +49,8 @@ User.hasMany(Transaction, { as: 'seller', foreignKey: 'seller_id' });
 Transaction.belongsTo(User, { as: 'buyer', foreignKey: 'buyer_id' });
 Transaction.belongsTo(User, { as: 'seller', foreignKey: 'seller_id' });
 
+export { sequelize };
+
 export default {
   sequelize,
   User, Crop, Bid, LogisticsRequest, LogisticsProvider, Service, ServiceRequest, Transaction
